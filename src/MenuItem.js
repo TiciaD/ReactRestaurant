@@ -16,14 +16,45 @@ class MenuItem extends Component {
             }   
     }
 
+    generatePrice() {
+        let max;
+        let min;
+        switch (this.props.type) {
+            case '1':
+            case '3':
+                max = 18;
+                min = 3;
+                break;
+            case '5':
+                max = 28;
+                min = 10;
+                break;
+            case '8':
+                max = 5;
+                min = 1;
+                break;
+            default:
+                max = 15;
+                min = 1;
+        };
+        let range = (max - min) + min
+        let randPrice = (Math.random() * range).toFixed(2);
+        return randPrice;
+    };
+
     render() {
-        // const newFood = this.state.foods.map((item, i) => (
-        //     <div>
-        //         <h5>{ item.name }</h5>
-        //         <p>{ item.description }</p>
-        //     </div> 
-        // ));
-        return <h1>Menu Items:</h1>
+        const newFood = this.state.foods.map((item, i) => (
+            <>
+                <h5>{ item.name }</h5>
+                <p>{ item.description } ${this.generatePrice()}</p>
+            </> 
+        ));
+        return (
+            <>
+                <h1>Menu Items:</h1>
+                <>{newFood}</>
+            </>
+        )
     }
 }
 

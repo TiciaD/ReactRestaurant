@@ -9,42 +9,30 @@ import MenuItem from './MenuItem';
 class Menu extends Component {
     constructor(props) {
         super(props);
-        this.state = {drinks: []}
-        this.baseAPI_URL = "https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/menu/";
-    }
-    async componentDidMount() {
-        let beverages = await axios.get(`${this.baseAPI_URL}type_amount/8/5`);
-            this.setState({ drinks: beverages.data });
-            for (let i = 0; i < beverages.data.length; i++) {
-            console.log(beverages.data[i].name);
-            <h2>{beverages.data[i].description}</h2>
-            }   
-    }
+        this.state = {foodType: '1', title: 'Breakfast'};
+    };
+
+    changeMenuType() {};
 
     render() {
-        const newDrink = this.state.drinks.map((item, i) => (
-            <div>
-                <h5>{ item.name }</h5>
-                <p>{ item.description }</p>
-            </div>
-        ));
+
         return (
-            <div>
+            <>
                 <Container>
                     <Row>
                         <Col>
-                            <h2>Beverages</h2>
+                            <h2>{this.state.title}</h2>
                         </Col>
                     </Row>
                     <Row>
-                        <Col>{ newDrink }</Col>
+                        <Col><MenuItem type={this.state.foodType}/></Col>
                     </Row>
                     <Row>
-                        <Col><MenuItem type='1'/></Col>
+                        <Col><MenuItem type='8'/></Col>
                     </Row>
                 </Container>
-            </div>
+            </>
         )
     }
-}
+};
 export default Menu;

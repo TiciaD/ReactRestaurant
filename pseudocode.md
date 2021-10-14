@@ -48,19 +48,13 @@
 ## Breakdown Wireframe UI into Components
 ```
 App/Page
-    - Menu
-        - MenuType
-            - MenuItem
+    - MenuType
+        - MenuItem
 ```
 
 ### App/Page
 - renders navbar with restaurant name
 - renders footer with address and hours of operation
-
-### Menu
-- renders menu template
-- calls API for drink types
-- renders Beverages section
 
 ### MenuType
 - gets menu type from state
@@ -75,10 +69,28 @@ App/Page
 
 ### Class Responsibility Collaborator (CRC)
 ```
-App         |
-            |
-
+App                                                 |
+                                                    |
+renders navbar with restaurant name                 |   None
+renders footer with address and hours of operation  |
+                                                    |
 
 ```
+```
+MenuType                                                            |                   
+                                                                    |
+gets menu type from state                                           |   MenuItem
+renders header, image and buttons based on menu type                |   (Needs to know Menu type)
+updates view if button selected to change menu type                 |
+tells Menu Item component about state change from button clicked    |
 
+```
+```
+MenuItem                                                |                   
+                                                        |
+gets API data based on state of menu type               |   MenuType 
+generates random price for each item and renders it     |   (Passes down type from state)
+renders item name and description based on API call     |
+
+```
 ### Functions
