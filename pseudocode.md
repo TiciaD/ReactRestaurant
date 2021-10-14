@@ -70,4 +70,9 @@ App/Page
 
 ### MenuItem
 - gets API data based on state of menu type
-- generates random price for each item
+- generates random price for each item and renders it
+- renders item name and description based on API call
+
+### Classes
+1. 
+### Functions
