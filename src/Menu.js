@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import MenuItem from './MenuItem';
+import './Menu.css';
 
 
 class Menu extends Component {
@@ -18,17 +18,24 @@ class Menu extends Component {
 
         return (
             <>
-                <Container>
+                <Container className="bg-white my-5">
                     <Row>
                         <Col>
-                            <h2>{this.state.title}</h2>
+                            <h1 className="mt-4">{this.state.title}</h1>
                         </Col>
                     </Row>
                     <Row>
-                        <Col><MenuItem type={this.state.foodType}/></Col>
+                        <div className="col-4"><MenuItem type={this.state.foodType}/></div>
+                        <div className="col-4"><img className="img-thumbnail" src="./img/Breakfast.jpg" alt={this.state.title}/></div>
+                        <div className="col-4"><MenuItem type={this.state.foodType}/></div>
                     </Row>
                     <Row>
-                        <Col><MenuItem type='8'/></Col>
+                        <div className="col-4"><MenuItem type={this.state.foodType}/></div>
+                        <Col>
+                            <h2>Beverages</h2>
+                            <MenuItem type='8'/>
+                        </Col>
+                        <div className="col-4"><MenuItem type={this.state.foodType}/></div>
                     </Row>
                 </Container>
             </>

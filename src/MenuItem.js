@@ -46,12 +46,12 @@ class MenuItem extends Component {
         const newFood = this.state.foods.map((item, i) => (
             <>
                 <h5>{ item.name }</h5>
-                <p>{ item.description } ${this.generatePrice()}</p>
+                <p>{ item.description }</p>
+                <p className="fw-bold">${this.generatePrice()}</p>
             </> 
         ));
         return (
             <>
-                <h1>Menu Items:</h1>
                 <>{newFood}</>
             </>
         )

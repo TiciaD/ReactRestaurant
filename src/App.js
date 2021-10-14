@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App d-flex flex-column min-vh-100 bg-dark bg-gradient">
         <Navbar bg="light" expand="lg">
             <Container>
                 <Navbar.Brand href="#home">Bootstrap Bob's Diner</Navbar.Brand>
@@ -22,6 +22,12 @@ function App() {
             </Container>
         </Navbar>
         <Menu />
+        <footer className="bg-light bg-gradient">
+            <Container className="mt-auto">
+                <p>Address</p>
+                <p>Hours:</p>
+            </Container>
+        </footer>
     </div>
   );
 }
