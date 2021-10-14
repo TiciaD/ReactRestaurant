@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This project is fake menu for a fake restaurant that I'm building with React and Bootstrap
+
 ## Available Scripts
 
 In the project directory, you can run:
