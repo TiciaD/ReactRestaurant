@@ -73,6 +73,12 @@ App/Page
 - generates random price for each item and renders it
 - renders item name and description based on API call
 
-### Classes
-1. 
+### Class Responsibility Collaborator (CRC)
+```
+App         |
+            |
+
+
+```
+
 ### Functions
