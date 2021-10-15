@@ -10,7 +10,7 @@ function App() {
     <div className="App d-flex flex-column min-vh-100 bg-dark bg-gradient">
         <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">Bootstrap Bob's Diner</Navbar.Brand>
+                <Navbar.Brand className="title fw-bold" href="#home">Bootstrap Bob's Diner</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
@@ -23,9 +23,12 @@ function App() {
         </Navbar>
         <Menu />
         <footer className="bg-light bg-gradient">
-            <Container className="mt-auto">
-                <p>Address</p>
-                <p>Hours:</p>
+            <Container className="mt-auto pt-2 d-flex d-flex justify-content-between fw-bolder">
+                <p>348 E Main St, Lexington, KY</p>
+                <p>Our Hours:  
+                    M-F: 2AM - 6AM
+                    Weekends: Closed
+                </p>
             </Container>
         </footer>
     </div>
