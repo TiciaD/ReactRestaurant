@@ -29,7 +29,7 @@ class Menu extends Component {
     render() {
         return (
             <>
-                <Container className="bg-white my-5 mx-auto">
+                <Container className="bg-white my-5 mx-auto shadow-lg p-3 mb-5 bg-body rounded">
                     <Row>
                         <Col>
                             <h1 className="title fw-bold my-4">{this.state.title}</h1>

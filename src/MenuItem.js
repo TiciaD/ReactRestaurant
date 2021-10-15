@@ -19,9 +19,9 @@ class MenuItem extends Component {
         this.fetchMenu();
     }
 
-    componentDidUpdate() {
-        console.log('Updated!');
-    }
+    // componentDidUpdate() {
+    //     console.log('Updated!');
+    // }
 
     generatePrice() {
         let max;
