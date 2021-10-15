@@ -65,16 +65,16 @@ renders footer with address and hours of operation  |
 MenuType                                                            |                   
                                                                     |
 gets menu type from state                                           |   MenuItem
-renders header, image and buttons based on menu type                |   (Needs to know Menu type)
+renders header, image and buttons based on menu type                |   (Needs to know API data)
+gets API data based on state of menu type                           |   
 updates view if button selected to change menu type                 |
 tells Menu Item component about state change from button clicked    |
 
 ```
 ```
 MenuItem                                                |                   
-                                                        |
-gets API data based on state of menu type               |   MenuType 
-generates random price for each item and renders it     |   (Passes down type from state)
+                                                        |   MenuType
+generates random price for each item and renders it     |   (Passes down API data from state as a prop)
 renders item name and description based on API call     |
 
 ```
