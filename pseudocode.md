@@ -52,21 +52,6 @@ App/Page
         - MenuItem
 ```
 
-### App/Page
-- renders navbar with restaurant name
-- renders footer with address and hours of operation
-
-### MenuType
-- gets menu type from state
-- renders header, image and buttons based on menu type
-- updates view if button selected to change menu type
-- tells Menu Item component if state changed from button clicked
-
-### MenuItem
-- gets API data based on state of menu type
-- generates random price for each item and renders it
-- renders item name and description based on API call
-
 ### Class Responsibility Collaborator (CRC)
 ```
 App                                                 |
@@ -94,3 +79,4 @@ renders item name and description based on API call     |
 
 ```
 ### Functions
+generatePrice() ---> takes a range of numbers based on menu type and generates a random price
