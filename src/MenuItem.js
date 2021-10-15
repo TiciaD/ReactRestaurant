@@ -1,27 +1,14 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 class MenuItem extends Component {
+    // Model
     constructor(props) {
         super(props);
-        this.state = {foods: []};
-        this.baseAPI_URL = "https://port-3000-aincbootcampapi-ianrios529550.codeanyapp.com/api/menu/";
-    }
-    async fetchMenu() {
-        let newItem = await axios.get(`${this.baseAPI_URL}type_amount/${this.props.type}/3`);
-            this.setState({ foods: newItem.data });
-            for (let i = 0; i < newItem.data.length; i++) {
-            console.log(newItem.data[i].name);
-            }   
+        this.state = { foods: [] };
+
     }
 
-    componentDidMount() {
-        this.fetchMenu();
-    }
-
-    componentDidUpdate() {
-        console.log('Updated!');
-    }
+    // Controller
 
     generatePrice() {
         let max;
@@ -49,16 +36,13 @@ class MenuItem extends Component {
     };
 
     render() {
-        const newFood = this.state.foods.map((item, i) => (
-            <>
-                <h5 className="text-decoration-underline" key={i}>{ item.name }</h5>
-                <p key={i+100}>{ item.description }</p>
-                <p className="fw-bold">${this.generatePrice()}</p>
-            </> 
-        ));
+        // View
         return (
+
             <>
-                <>{newFood}</>
+                <h5 className="text-decoration-underline">{this.props.data.name}</h5>
+                <p>{this.props.data.description}</p>
+                <p className="fw-bold">${this.generatePrice()}</p>
             </>
         )
     }
