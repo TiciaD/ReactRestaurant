@@ -39,5 +39,28 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAHQadU-rqCWRAfxRPqICGdMz9sRUn0UVE",
+            authDomain: "react-restaurant-awesomeinc.firebaseapp.com",
+            projectId: "react-restaurant-awesomeinc",
+            storageBucket: "react-restaurant-awesomeinc.appspot.com",
+            messagingSenderId: "332077951077",
+            appId: "1:332077951077:web:d7dc4de5f976a4cb853e8c",
+            measurementId: "G-Q096GLGHCJ"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
   </body>
 </html>
