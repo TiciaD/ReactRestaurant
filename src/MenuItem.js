@@ -12,7 +12,7 @@ class MenuItem extends Component {
             this.setState({ foods: newItem.data });
             for (let i = 0; i < newItem.data.length; i++) {
             console.log(newItem.data[i].name);
-            }   
+        }   
     }
 
     componentDidMount() {

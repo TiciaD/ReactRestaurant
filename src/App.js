@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Menu from './Menu';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import Container from 'react-bootstrap/Container';
+import {Container, Nav, Navbar} from 'react-bootstrap';
 import './App.css';
 
 function App() {
@@ -14,16 +12,16 @@ function App() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link href="#home">HOME</Nav.Link>
-                    <Nav.Link href="#">OUR MENU</Nav.Link>
-                    <Nav.Link href="#">ABOUT</Nav.Link>
+                    <Nav.Link href="/home" disabled>HOME</Nav.Link>
+                    <Nav.Link href="/menu" active>OUR MENU</Nav.Link>
+                    <Nav.Link href="/about" disabled>ABOUT</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
         <Menu />
-        <footer className="bg-light bg-gradient">
-            <Container className="mt-auto pt-2 d-flex d-flex justify-content-between fw-bolder">
+        <footer className="footer bg-light bg-gradient">
+            <Container className="pt-2 d-flex justify-content-between fw-bolder">
                 <p>348 E Main St, Lexington, KY</p>
                 <p>Our Hours:  
                     M-F: 2AM - 6AM
