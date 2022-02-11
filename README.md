@@ -10,4 +10,4 @@ The owners are still working on their recipes. They've populated an API with man
 - CSS
 - Bootstrap
 - JS
-- React
+- React (class-based)
